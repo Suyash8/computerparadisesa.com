@@ -44,10 +44,20 @@ function App() {
       return page;
     });
   }
-
+  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [className, setClassName] = useState("top-0");
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      setClassName("top-0");
+    } else {
+      setClassName("-top-20");
+    }
+    setPrevScrollpos(currentScrollPos);
+  };
   return (
-    <div className="app w-full h-full">
-      <Navbar pages={pages} setHome={setHome} />
+    <div className="app w-full min-h-screen h-full">
+      <Navbar pages={pages} setHome={setHome} className={className} />
       <Main pages={pages} setHome={setHome} />
       <Footer pages={pages} setHome={setHome} />
     </div>

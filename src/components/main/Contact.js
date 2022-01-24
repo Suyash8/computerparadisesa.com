@@ -12,14 +12,8 @@ export default function Contact(props) {
 function Heading() {
   return (
     <div className="flex flex-col gap-3 items-center py-3 text-white mx-2">
-      <h2 className="mx-4 my-6 h-full flex flex-row text-xlg items-center justify-center font-bold text-gray-900 max-w-min">
-        <div>C</div>
-        <div>O</div>
-        <div>N</div>
-        <div>T</div>
-        <div>A</div>
-        <div>C</div>
-        <div>T</div>
+      <h2 className="mx-4 my-6 h-full flex flex-row text-xl items-center justify-center font-bold text-gray-900 max-w-min">
+        CONTACT
       </h2>
       <div className="text-6xl font-medium text-center">
         Reach out for support or just say hello
