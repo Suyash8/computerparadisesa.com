@@ -14,7 +14,7 @@ export default function Main({ pages, setHome }) {
 
   let content = 'Home';
   if (page.name === 'Home') {
-    content = <Home pages={page} />;
+    content = <Home pages={page} setHome={setHome} />;
   } else if (page.name === 'About') {
     content = <About pages={page} />;
   } else if (page.name === 'Products') {
